@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, useMotionValue, useTransform, animate, AnimatePresence } from 'framer-motion'
 import { FaDownload, FaArrowRight, FaEnvelope } from 'react-icons/fa'
+import profileImage from '../assets/profile.jpg'
 
 const Counter = ({ value, label }) => {
   const count = useMotionValue(0)
@@ -268,7 +269,7 @@ UI/UX Designer & Full-Stack Developer crafting intelligent, user-focused product
             }}
           >
             <img 
-              src="/src/assets/profile.jpg" 
+              src={profileImage} 
               alt="Muhammad Hasnain"
               className="w-full h-full object-cover object-top rounded-full scale-90 "
             />
