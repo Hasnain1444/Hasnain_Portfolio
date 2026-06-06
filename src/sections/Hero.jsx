@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, useMotionValue, useTransform, animate, AnimatePresence } from 'framer-motion'
 import { FaDownload, FaArrowRight, FaEnvelope } from 'react-icons/fa'
 import profileImage from '../assets/profile.jpg'
@@ -30,9 +30,7 @@ const Counter = ({ value, label }) => {
 }
 
 const Hero = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [roleIndex, setRoleIndex] = useState(0)
-  const containerRef = useRef(null)
 
   const roles = [
     'UI/UX Designer',
@@ -49,21 +47,6 @@ const Hero = () => {
     return () => clearInterval(interval)
   }, [])
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const rect = containerRef.current?.getBoundingClientRect()
-      if (rect) {
-        setMousePosition({
-          x: (e.clientX - rect.left - rect.width / 2) / 20,
-          y: (e.clientY - rect.top - rect.height / 2) / 20,
-        })
-      }
-    }
-
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
-
   const handleScroll = (e, href) => {
     e.preventDefault()
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
@@ -72,7 +55,6 @@ const Hero = () => {
   return (
     <section
       id="home"
-      ref={containerRef}
       className="relative min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20 overflow-hidden"
     >
       <div className="max-w-[1400px] mx-auto w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -198,82 +180,49 @@ UI/UX Designer & Full-Stack Developer crafting intelligent, user-focused product
             }}
           />
 
-          <motion.div
-            className="absolute w-[320px] h-[320px] md:w-[400px] md:h-[400px] rounded-full border-2 border-accent-blue/30"
-            animate={{ rotate: 360 }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: 'linear',
-            }}
+          {/* Single rotating border — CSS animation instead of framer-motion */}
+          <div
+            className="absolute w-[320px] h-[320px] md:w-[400px] md:h-[400px] rounded-full border-2 border-accent-blue/20"
+            style={{ animation: 'heroSpin 25s linear infinite' }}
           />
 
-          <motion.div
-            className="absolute w-[280px] h-[280px] md:w-[350px] md:h-[350px] rounded-full border-2 border-accent-cyan/20"
-            animate={{ rotate: -360 }}
-            transition={{
-              duration: 25,
-              repeat: Infinity,
-              ease: 'linear',
-            }}
-          />
-
-          {[...Array(6)].map((_, i) => (
-            <motion.div
+          {/* Only 3 orbiting dots instead of 6 */}
+          {[...Array(3)].map((_, i) => (
+            <div
               key={i}
               className="absolute w-3 h-3 rounded-full bg-accent-blue"
               style={{
                 top: '50%',
                 left: '50%',
-              }}
-              animate={{
-                rotate: 360,
-              }}
-              transition={{
-                duration: 8 + i * 2,
-                repeat: Infinity,
-                ease: 'linear',
+                animation: `heroOrbit ${10 + i * 3}s linear infinite`,
               }}
             >
-              <motion.div
+              <div
                 className="absolute w-3 h-3 rounded-full bg-accent-blue shadow-glow"
                 style={{
-                  transform: `translateX(${140 + i * 20}px)`,
-                }}
-                animate={{
-                  scale: [1, 1.3, 1],
-                  opacity: [0.6, 1, 0.6],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  delay: i * 0.3,
+                  transform: `translateX(${150 + i * 25}px)`,
+                  animation: `heroPulse 2.5s ease-in-out ${i * 0.4}s infinite`,
                 }}
               />
-            </motion.div>
+            </div>
           ))}
 
-          <motion.div
+          <style>{`
+            @keyframes heroSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+            @keyframes heroOrbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+            @keyframes heroPulse { 0%,100% { opacity: 0.5; transform: translateX(150px) scale(1); } 50% { opacity: 1; transform: translateX(150px) scale(1.2); } }
+          `}</style>
+
+          <div
             className="relative w-[240px] h-[240px] md:w-[300px] md:h-[300px] rounded-full glass-card flex items-center justify-center overflow-hidden"
-            animate={{
-              boxShadow: [
-                '0 0 40px rgba(59, 130, 246, 0.3)',
-                '0 0 60px rgba(59, 130, 246, 0.5)',
-                '0 0 40px rgba(59, 130, 246, 0.3)',
-              ],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
+            style={{ boxShadow: '0 0 40px rgba(59, 130, 246, 0.3)' }}
           >
             <img 
               src={profileImage} 
               alt="Muhammad Hasnain"
               className="w-full h-full object-cover object-top rounded-full scale-90 "
             />
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
