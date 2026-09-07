@@ -1,33 +1,37 @@
-
 import { motion } from 'framer-motion'
-import { FaCode, FaPaintBrush, FaMobileAlt, FaBullhorn, FaBriefcase } from 'react-icons/fa'
+import { FaBrain, FaServer, FaComments, FaCode, FaChartLine } from 'react-icons/fa'
 
 const Services = () => {
   const services = [
     {
-      title: 'Web Development',
-      description: 'Building responsive and performant web applications with modern technologies.',
+      title: 'GenAI / LLM Apps',
+      description:
+        'Building LLM-powered features for scoring, extraction, and generation — with clear prompts and measurable outputs.',
+      icon: FaBrain,
+    },
+    {
+      title: 'API Integration',
+      description:
+        'Connecting AI capabilities to backend systems via REST APIs so models become reliable product features.',
+      icon: FaServer,
+    },
+    {
+      title: 'Prompt Engineering',
+      description:
+        'Designing and iterating prompts for accuracy, cost, and consistency across assessment and screening workflows.',
+      icon: FaComments,
+    },
+    {
+      title: 'Full-Stack Delivery',
+      description:
+        'Shipping end-to-end systems with React, Node.js, databases, and Docker so AI features reach real users.',
       icon: FaCode,
     },
     {
-      title: 'UI/UX Design',
-      description: 'Creating intuitive and visually appealing user interfaces and experiences.',
-      icon: FaPaintBrush,
-    },
-    {
-      title: 'Mobile Development',
-      description: 'Developing cross-platform mobile applications with native-like performance.',
-      icon: FaMobileAlt,
-    },
-    {
-      title: 'Branding',
-      description: 'Crafting unique brand identities that resonate with your target audience.',
-      icon: FaBullhorn,
-    },
-    {
-      title: 'Portfolio Design',
-      description: 'Designing stunning portfolios that showcase your work effectively.',
-      icon: FaBriefcase,
+      title: 'ML Experimentation',
+      description:
+        'Exploring models, evaluating outputs, and turning research into practical prototypes with Python and Jupyter.',
+      icon: FaChartLine,
     },
   ]
 
@@ -41,7 +45,7 @@ const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          My <span className="text-gradient">Services</span>
+          What I <span className="text-gradient">Build</span>
         </motion.h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">

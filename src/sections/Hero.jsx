@@ -33,11 +33,10 @@ const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0)
 
   const roles = [
-    'UI/UX Designer',
-    'Full Stack Developer',
-    'React Native Developer',
-    'React Developer',
-    'Frontend Engineer',
+    'Junior AI Engineer',
+    'GenAI / LLM Developer',
+    'Python Developer',
+    'Full-Stack Developer',
   ]
 
   useEffect(() => {
@@ -105,7 +104,9 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-UI/UX Designer & Full-Stack Developer crafting intelligent, user-focused products that blend beautiful design with powerful technology.          </motion.p>
+            Computer Science graduate building GenAI and LLM applications — from local LLM
+            scoring pipelines to intelligent full-stack systems with Python, REST APIs, and modern ML tools.
+          </motion.p>
 
           <motion.div
             className="flex flex-wrap gap-4"
@@ -119,7 +120,7 @@ UI/UX Designer & Full-Stack Developer crafting intelligent, user-focused product
               whileTap={{ scale: 0.95 }}
               onClick={(e) => handleScroll(e, '#projects')}
             >
-              View Projects
+              View AI Projects
               <FaArrowRight />
             </motion.button>
 
@@ -151,9 +152,9 @@ UI/UX Designer & Full-Stack Developer crafting intelligent, user-focused product
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            <Counter value={2} label="Years Experience" />
-            <Counter value={15} label="Projects" />
-            <Counter value={5} label="Technologies" />
+            <Counter value={1} label="Years in AI/ML" />
+            <Counter value={10} label="Projects" />
+            <Counter value={12} label="Technologies" />
           </motion.div>
         </motion.div>
 
@@ -180,13 +181,11 @@ UI/UX Designer & Full-Stack Developer crafting intelligent, user-focused product
             }}
           />
 
-          {/* Single rotating border — CSS animation instead of framer-motion */}
           <div
             className="absolute w-[320px] h-[320px] md:w-[400px] md:h-[400px] rounded-full border-2 border-accent-blue/20"
             style={{ animation: 'heroSpin 25s linear infinite' }}
           />
 
-          {/* Only 3 orbiting dots instead of 6 */}
           {[...Array(3)].map((_, i) => (
             <div
               key={i}
@@ -217,8 +216,8 @@ UI/UX Designer & Full-Stack Developer crafting intelligent, user-focused product
             className="relative w-[240px] h-[240px] md:w-[300px] md:h-[300px] rounded-full glass-card flex items-center justify-center overflow-hidden"
             style={{ boxShadow: '0 0 40px rgba(59, 130, 246, 0.3)' }}
           >
-            <img 
-              src={profileImage} 
+            <img
+              src={profileImage}
               alt="Muhammad Hasnain"
               className="w-full h-full object-cover object-top rounded-full scale-90 "
             />

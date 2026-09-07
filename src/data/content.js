@@ -9,14 +9,14 @@ export const navLinks = [
 ]
 
 export const heroStats = [
-  { label: 'Years Experience', value: 3 },
-  { label: 'Projects', value: 25 },
-  { label: 'Technologies', value: 15 },
+  { label: 'Years in AI/ML', value: 1 },
+  { label: 'Projects', value: 10 },
+  { label: 'Technologies', value: 12 },
 ]
 
 export const aboutCards = [
-  { title: 'UI Design', icon: 'palette' },
-  { title: 'Full Stack', icon: 'code' },
-  { title: 'Performance', icon: 'zap' },
-  { title: 'Modern Stack', icon: 'layers' },
+  { title: 'GenAI & LLMs', icon: 'brain' },
+  { title: 'Python & Backend', icon: 'code' },
+  { title: 'Data & ML', icon: 'database' },
+  { title: 'AI Systems', icon: 'robot' },
 ]

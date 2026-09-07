@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useRef, useEffect } from 'react'
@@ -35,33 +34,33 @@ const SkillBar = ({ name, percentage, delay }) => {
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Frontend',
+      title: 'AI / GenAI',
       skills: [
-        { name: 'React / Next.js', percentage: 95 },
-        { name: 'TypeScript', percentage: 90 },
-        { name: 'Tailwind CSS', percentage: 92 },
-        { name: 'Framer Motion', percentage: 88 },
-        { name: 'HTML / CSS', percentage: 95 },
+        { name: 'LLMs & Prompt Engineering', percentage: 88 },
+        { name: 'Generative AI Concepts', percentage: 85 },
+        { name: 'Ollama / Local LLMs', percentage: 82 },
+        { name: 'NLP Fundamentals', percentage: 78 },
+        { name: 'AI Output Evaluation', percentage: 75 },
       ],
     },
     {
-      title: 'Backend',
+      title: 'Python & ML',
       skills: [
-        { name: 'Node.js', percentage: 85 },
-        { name: 'Express.js', percentage: 82 },
-        { name: 'MongoDB', percentage: 80 },
-        { name: 'PostgreSQL', percentage: 78 },
+        { name: 'Python (OOP, Debugging)', percentage: 90 },
+        { name: 'Pandas / NumPy', percentage: 85 },
+        { name: 'Scikit-learn', percentage: 80 },
+        { name: 'TensorFlow / PyTorch', percentage: 72 },
+        { name: 'Jupyter / Experimentation', percentage: 85 },
+      ],
+    },
+    {
+      title: 'APIs & Full Stack',
+      skills: [
         { name: 'REST APIs', percentage: 88 },
-      ],
-    },
-    {
-      title: 'UI Design',
-      skills: [
-        { name: 'Figma', percentage: 90 },
-        { name: 'Adobe XD', percentage: 85 },
-        { name: 'Responsive Design', percentage: 95 },
-        { name: 'User Research', percentage: 82 },
-        { name: 'Prototyping', percentage: 88 },
+        { name: 'Node.js / Express', percentage: 85 },
+        { name: 'PostgreSQL / MySQL', percentage: 82 },
+        { name: 'React / JavaScript', percentage: 90 },
+        { name: 'Docker / Git', percentage: 80 },
       ],
     },
   ]

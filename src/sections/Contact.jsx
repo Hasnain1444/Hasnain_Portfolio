@@ -68,10 +68,10 @@ const Contact = () => {
           >
             <div>
               <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Start a Project
+                Let's Build with AI
               </h3>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Ready to bring your ideas to life? Let's collaborate and create something extraordinary together.
+                Open to Junior AI / GenAI roles and collaborations — especially LLM apps, assessment systems, and API-backed AI features.
               </p>
             </div>
 
@@ -92,7 +92,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Phone</p>
-                  <p className="text-white font-medium">+3390809804</p>
+                  <p className="text-white font-medium">+92 339 0809804</p>
                 </div>
               </div>
 
@@ -102,7 +102,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Location</p>
-                  <p className="text-white font-medium">Pakistan</p>
+                  <p className="text-white font-medium">Islamabad, Pakistan (Remote OK)</p>
                 </div>
               </div>
             </div>
@@ -139,7 +139,7 @@ const Contact = () => {
               transition={{ delay: 0.3 }}
             >
               <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-green-400 font-medium">Available for work</span>
+              <span className="text-green-400 font-medium">Open to Junior AI / GenAI roles</span>
             </motion.div>
           </motion.div>
 
@@ -192,7 +192,7 @@ const Contact = () => {
                 required
                 rows="5"
                 className="w-full px-6 py-4 rounded-xl bg-secondary/50 border border-gray-700 text-white placeholder-gray-500 focus:border-accent-blue focus:outline-none focus:ring-2 focus:ring-accent-blue/20 transition-all resize-none"
-                placeholder="Tell me about your project..."
+                placeholder="Tell me about the role or AI project..."
               />
             </div>
 

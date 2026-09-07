@@ -3,37 +3,61 @@ import project_1 from '../assets/project-1.jpeg'
 import project_2 from '../assets/project-2.jpeg'
 
 const projects = [
- {
-  title: 'Quranic App',
-  category: 'Mobile Development',
-  image: project_1,
-  description:
-    'A feature-rich Quran mobile application built to enhance spiritual learning and accessibility. Developed responsive and intuitive interfaces with interactive Surah navigation, advanced search, and smart bookmarking. Focused on delivering a clean user experience through thoughtful UI/UX design and seamless mobile performance.',
-  technologies: ['React Native', 'Expo', 'JavaScript', 'Figma', 'UI/UX Design'],
-  liveUrl: 'https://quranic-ap.netlify.app/',
-  gradient: ['#22c55e', '#14b8a6'],
-},
-{
-  title: 'Docutect AI',
-  category: 'AI Product Design',
-  image: project_2,
-  description:
-    'Designed the complete user experience for an AI-powered document intelligence platform that enables users to process, analyze, and interact with documents efficiently. Focused on responsive design, clear information hierarchy, accessibility, and creating a modern interface that simplifies complex AI workflows.',
-  technologies: ['Figma', 'UI/UX Design', 'User Flows', 'Wireframing', 'Prototyping'],
-  liveUrl: 'https://www.docutect.com/',
-  gradient: ['#8b5cf6', '#ec4899'],
-},
- {
-  title: 'Skill Exchange & Collaboration Hub',
-  category: 'Full Stack Development',
-  image: '',
-  description:
-    'A full-stack networking platform designed to facilitate skill exchange and collaborative project development. Features include user profiles, skill management, project discovery, collaborator matching, authentication, and dynamic interactions powered by a scalable ReactJS and Node.js architecture.',
-  technologies: ['ReactJS', 'Node.js', 'PostgreSQL', 'Authentication', 'REST APIs'],
-  liveUrl: '#',
-  gradient: ['#22c55e', '#0ea5e9'],
-},
-  
+  {
+    title: 'PKCERT SecureHire',
+    category: 'GenAI / LLM',
+    image: '',
+    description:
+      'AI recruitment and CV-screening platform for PKCERT using a locally hosted LLM (Ollama). Auto-scores CVs against job requirements, extracts skills/education/experience, and flags red flags with confidence ratings — fully self-hosted so no candidate data leaves infrastructure. Includes RBAC, encrypted CNIC duplicate detection, transcript verification, admin score overrides with audit history, bias/fairness analytics, and Docker Compose deployment.',
+    technologies: ['Ollama (Local LLM)', 'React', 'Node.js/Express', 'MySQL', 'Docker', 'Prompt Engineering'],
+    liveUrl: '',
+    githubUrl: 'https://github.com/Hasnain1444',
+    gradient: ['#3b82f6', '#06b6d4'],
+  },
+  {
+    title: 'Docutect AI',
+    category: 'AI Product Design',
+    image: project_2,
+    description:
+      'Designed the complete UX for an AI-powered document intelligence platform that helps users process, analyze, and interact with documents. Focused on clear information hierarchy, accessibility, and interfaces that make complex AI workflows understandable for developers and enterprise users.',
+    technologies: ['Figma', 'AI Product Design', 'User Flows', 'Wireframing', 'Prototyping'],
+    liveUrl: 'https://www.docutect.com/',
+    githubUrl: '',
+    gradient: ['#8b5cf6', '#ec4899'],
+  },
+  {
+    title: 'Machine Learning Lab',
+    category: 'AI / ML',
+    image: '',
+    description:
+      'Hands-on machine learning experiments covering classic ML pipelines, data preparation, and model evaluation. Built as a learning portfolio alongside IBM certifications in Generative AI & LLMs, Machine Learning with Python, and Deep Learning with Keras.',
+    technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Jupyter', 'ML Fundamentals'],
+    liveUrl: '',
+    githubUrl: 'https://github.com/Hasnain1444/Machine_Learning',
+    gradient: ['#f59e0b', '#ef4444'],
+  },
+  {
+    title: 'Skill Exchange Hub',
+    category: 'Full Stack / APIs',
+    image: '',
+    description:
+      'Full-stack networking platform connecting students and professionals for skill sharing and collaborative projects. Implements authentication, RESTful APIs, PostgreSQL, and dynamic project matching — solid backend foundations transferable to AI service integration.',
+    technologies: ['ReactJS', 'Node.js', 'PostgreSQL', 'REST APIs', 'Authentication'],
+    liveUrl: '',
+    githubUrl: 'https://github.com/Hasnain1444',
+    gradient: ['#22c55e', '#0ea5e9'],
+  },
+  {
+    title: 'Quranic App',
+    category: 'Mobile Development',
+    image: project_1,
+    description:
+      'Feature-rich Quran mobile app with Surah navigation, search, and bookmarking. Built with React Native at CMGL — demonstrates shipping polished product features on a cross-functional team.',
+    technologies: ['React Native', 'Expo', 'JavaScript', 'Figma'],
+    liveUrl: 'https://quranic-ap.netlify.app/',
+    githubUrl: 'https://github.com/Hasnain1444/Quranic_App',
+    gradient: ['#22c55e', '#14b8a6'],
+  },
 ]
 
 /* ---------- small inline icons (no extra dependency) ---------- */
@@ -50,6 +74,11 @@ const ExternalLink = (props) => (
     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
     <polyline points="15 3 21 3 21 9" />
     <line x1="10" y1="14" x2="21" y2="3" />
+  </svg>
+)
+const GithubIcon = (props) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.665-.303-5.467-1.333-5.467-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.29-1.552 3.297-1.23 3.297-1.23.653 1.652.242 2.873.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.48 5.92.43.37.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .322.216.694.825.576C20.565 21.796 24 17.297 24 12 24 5.37 18.627 0 12 0z" />
   </svg>
 )
 
@@ -271,21 +300,37 @@ export default function Projects() {
             </div>
 
             <div
-              className="flex justify-center"
+              className="flex justify-center flex-wrap gap-4"
               style={{ marginTop: 44, animation: 'projDetailIn .6s cubic-bezier(.16,1,.3,1) .25s both' }}
             >
-              <a
-                className="proj-live bg-accent-blue text-white"
-                href={projects[active].liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 10, padding: '14px 34px',
-                  borderRadius: 99, fontSize: 16, fontWeight: 600, textDecoration: 'none',
-                }}
-              >
-                View Live <ExternalLink style={{ width: 18, height: 18 }} />
-              </a>
+              {projects[active].liveUrl ? (
+                <a
+                  className="proj-live bg-accent-blue text-white"
+                  href={projects[active].liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex', alignItems: 'center', gap: 10, padding: '14px 34px',
+                    borderRadius: 99, fontSize: 16, fontWeight: 600, textDecoration: 'none',
+                  }}
+                >
+                  View Live <ExternalLink style={{ width: 18, height: 18 }} />
+                </a>
+              ) : null}
+              {projects[active].githubUrl ? (
+                <a
+                  className="proj-live glass border border-accent-blue/30 text-white"
+                  href={projects[active].githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex', alignItems: 'center', gap: 10, padding: '14px 34px',
+                    borderRadius: 99, fontSize: 16, fontWeight: 600, textDecoration: 'none',
+                  }}
+                >
+                  View on GitHub <GithubIcon style={{ width: 18, height: 18 }} />
+                </a>
+              ) : null}
             </div>
           </div>
         )}

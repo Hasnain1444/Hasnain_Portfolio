@@ -1,40 +1,41 @@
-
 import { motion } from 'framer-motion'
-import { FaPalette, FaCode, FaBolt, FaLayerGroup } from 'react-icons/fa'
+import { FaBrain, FaCode, FaDatabase, FaRobot } from 'react-icons/fa'
 
 const About = () => {
   const cards = [
     {
-      title: 'UI Design',
-      icon: FaPalette,
-      description: 'Creating intuitive and visually stunning user interfaces',
+      title: 'GenAI & LLMs',
+      icon: FaBrain,
+      description: 'Building LLM apps with prompt engineering, local models, and evaluation-minded workflows',
     },
     {
-      title: 'Full Stack',
+      title: 'Python & Backend',
       icon: FaCode,
-      description: 'End-to-end development with modern technologies',
+      description: 'Strong Python fundamentals with REST APIs, OOP, debugging, and clean software practices',
     },
     {
-      title: 'Performance',
-      icon: FaBolt,
-      description: 'Optimized applications for speed and efficiency',
+      title: 'Data & ML',
+      icon: FaDatabase,
+      description: 'Hands-on ML with Pandas, NumPy, Scikit-learn, and foundations in NLP and neural networks',
     },
     {
-      title: 'Modern Stack',
-      icon: FaLayerGroup,
-      description: 'Latest frameworks and best practices',
+      title: 'AI Systems',
+      icon: FaRobot,
+      description: 'Shipping AI features into real products — scoring pipelines, document intelligence, and APIs',
     },
   ]
 
   const techTags = [
-    'React',
-    'Next.js',
-    'TypeScript',
-    'Tailwind CSS',
+    'Python',
+    'LLMs',
+    'Prompt Engineering',
+    'Ollama',
+    'Machine Learning',
+    'REST APIs',
     'Node.js',
-    'MongoDB',
-    'Figma',
-    'GSAP',
+    'PostgreSQL',
+    'React',
+    'Docker',
   ]
 
   return (
@@ -47,9 +48,9 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Building the Future,
+          Building Intelligent Systems,
           <br />
-          <span className="text-gradient">One Product at a Time</span>
+          <span className="text-gradient">One Model at a Time</span>
         </motion.h2>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
@@ -61,15 +62,15 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="text-gray-300 text-base lg:text-lg leading-relaxed">
-              I'm a passionate developer and designer with a keen eye for detail and a 
-              commitment to creating exceptional digital experiences. With years of experience 
-              in the industry, I've honed my skills in modern web technologies.
+              I'm a Computer Science graduate and AI Engineer focused on Generative AI and LLM-based
+              applications. I build practical systems that use models for scoring, extraction, and
+              decision support — then ship them behind solid APIs and product UX.
             </p>
 
             <p className="text-gray-400 text-base lg:text-lg leading-relaxed">
-              My approach combines technical expertise with creative thinking to deliver 
-              solutions that not only look great but also perform flawlessly. I believe in 
-              writing clean, maintainable code and designing user-centered interfaces.
+              Recently I've been developing an AI recruitment platform with a locally hosted LLM
+              (Ollama) for CV screening, and contributing to AI-powered product design. I care about
+              clear prompts, measurable outputs, and software that teams can actually run and trust.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-4">
@@ -81,7 +82,7 @@ const About = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.05,
                     borderColor: 'rgba(59, 130, 246, 0.5)',
                     boxShadow: '0 0 15px rgba(59, 130, 246, 0.3)',
@@ -102,7 +103,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   boxShadow: '0 0 40px rgba(59, 130, 246, 0.3)',
                 }}

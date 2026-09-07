@@ -1,49 +1,63 @@
-
 import { motion } from 'framer-motion'
 
 const Experience = () => {
   const experiences = [
     {
-      title: 'UI/UX Designer',
-      company: 'Solexes (Pvt) Ltd.',
-      date: 'Feb 2026 – Present',
-      description: 'Designing intuitive and user-centered web and mobile experiences while contributing to AI-powered product development.',
+      title: 'AI & Software Development Intern',
+      company: 'National CERT | Technology Development Centre Directorate',
+      date: 'Jul 2026 – Present',
+      description:
+        'Selected for the National CERT Summer Internship Program under the AI & Software Development domain. Building AI-based software for real-world problems with Python and modern engineering practices.',
       responsibilities: [
-        'Created wireframes, user flows, and high-fidelity prototypes for web and mobile applications',
-        'Designed responsive and accessible interfaces that improved usability and user engagement',
-        'Collaborated closely with developers to ensure accurate implementation of design systems and UI components',
-        'Conducted user experience improvements through usability testing, feedback analysis, and iterative design processes',
+        'Developing an AI-based software solution using Python and modern software engineering practices',
+        'Collaborating with mentors and interns to design, develop, and implement scalable solutions',
+        'Working with APIs, databases, Git, and AI concepts across the software development lifecycle',
+        'Applying prompt design and model-assisted workflows to practical assessment and screening use cases',
       ],
-      technologies: ['Figma', 'UI/UX Design', 'Product Design','Wireframing','Prototyping','Design Systems','User Research','Responsive Design'],
+      technologies: ['Python', 'AI/ML', 'REST APIs', 'Git', 'Databases', 'Software Engineering'],
     },
     {
-  title: 'Mobile Application Developer',
-  company: 'CMGL | Coopers & McGil',
-  date: 'Jun 2025 - Aug 2025',
-  description: 'Collaborated on the development of modern mobile applications, combining React Native development with user-centered design principles to deliver engaging digital experiences.',
-  responsibilities: [
-    'Built responsive and high-performance mobile application interfaces using React Native',
-    'Translated Figma designs into production-ready mobile screens',
-    'Worked closely with cross-functional teams to enhance user experience and application usability',
-    'Implemented frontend features and optimized application workflows',
-    'Contributed to agile development processes and technical solution discussions',
-  ],
-  technologies: ['React Native', 'Expo', 'JavaScript', 'Figma', 'Git'],
-},
-   {
-  title: 'Computer Operator & Web Developer',
-  company: 'Socialedge (SMC-Private) Limited',
-  date: '2024 - 2025',
-  description: 'Contributed to the development and maintenance of digital solutions while managing technical operations and supporting business-critical systems.',
-  responsibilities: [
-    'Built and maintained web applications with a focus on performance and usability',
-    'Monitored and managed computer systems to ensure uninterrupted operations',
-    'Collaborated with cross-functional teams to design and implement technical solutions',
-    'Diagnosed and resolved technical issues, improving system reliability and efficiency',
-    'Performed software maintenance, updates, and optimization to enhance application performance',
-  ],
-  technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Node.js', 'Git'],
-},
+      title: 'UI/UX Designer',
+      company: 'Solexes (Pvt) Ltd.',
+      date: 'Feb 2026 – Jul 2026',
+      description:
+        'Designed intuitive web and mobile experiences while contributing to AI-powered product development, including Docutect AI.',
+      responsibilities: [
+        'Created wireframes, user flows, and high-fidelity prototypes for web and mobile applications',
+        'Designed responsive, accessible interfaces that improved usability and engagement',
+        'Collaborated with developers to ship accurate design systems and UI components',
+        'Contributed to Docutect AI — an AI-powered documentation intelligence platform',
+      ],
+      technologies: ['Figma', 'UI/UX Design', 'Product Design', 'Wireframing', 'Prototyping', 'AI Products'],
+    },
+    {
+      title: 'Mobile Application Developer',
+      company: 'CMGL | Coopers & McGil',
+      date: 'Jun 2025 – Aug 2025',
+      description:
+        'Built modern mobile application interfaces with React Native and user-centered design for production delivery.',
+      responsibilities: [
+        'Built responsive, high-performance mobile interfaces using React Native',
+        'Translated Figma designs into production-ready mobile screens',
+        'Collaborated with cross-functional teams on UX and application workflows',
+        'Delivered features on time within agile development processes',
+      ],
+      technologies: ['React Native', 'Expo', 'JavaScript', 'Figma', 'Git'],
+    },
+    {
+      title: 'Computer Operator & Web Developer',
+      company: 'SocialEdge (SMC-Private) Limited',
+      date: 'Jun 2025 – Feb 2026',
+      description:
+        'Developed and maintained digital solutions while managing technical operations and supporting business-critical systems.',
+      responsibilities: [
+        'Built and maintained web applications focused on performance and usability',
+        'Monitored systems to ensure uninterrupted operations',
+        'Collaborated on technical solutions across teams',
+        'Diagnosed issues and performed maintenance to improve reliability',
+      ],
+      technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Node.js', 'Git'],
+    },
   ]
 
   return (
